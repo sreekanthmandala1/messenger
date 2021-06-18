@@ -1,0 +1,32 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRip3VLqucpNXHQMWlHjaR3cZw1R8CxAWPQrbb0jM681rn7iFZkbYR2aQkv5QiZJFZQan0&usqp=CAU');
+  background-size: cover;
+}
+
+#id{
+  width:fit-content;
+
+}
+
+.example-viewport {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.card{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+

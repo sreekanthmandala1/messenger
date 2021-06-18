@@ -1,0 +1,22 @@
+<div  style="background-color:rgb(245, 245, 245)">
+<mat-card class="card border-0 ml-2 mt-4 py-0" style="background-color:rgb(245, 245, 245);">
+  <mat-card-header class="mt-2" style="cursor:pointer">
+    <div mat-card-avatar class="example-header-image" id="pp" style="width:60px;height:60px"></div>
+    <mat-card-title class="text-primary mt-2" id="title" style="font-size:3vh">Gravid Christofer</mat-card-title>
+    <mat-card-subtitle class="mt-2"id="subtitle" style="font-size:2vh">Senior Developer</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+  <div style="text-align:center;background-color:rgb(245, 245, 245)">
+  <mat-form-field class="ml-2"appearance="outline" [style.width.%]=80 style="font-size: 8px">
+    <input matInput placeholder="search friends" >
+  </mat-form-field>
+</div>
+  <mat-card class="card border-0 ml-2 py-1" *ngFor = "let data of dataList" style="background-color:rgb(245, 245, 245)">
+  <mat-card-header style="cursor:pointer">
+    <img mat-card-avatar class="example-header-image" id="pp" src={{data.image}} style="width:60px;height:60px">
+    <mat-card-title class="text-primary" id="title" >{{data.title}}</mat-card-title>
+    <mat-card-subtitle id="subtitle" ><p>{{data.subtitle}}</p></mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+</div>

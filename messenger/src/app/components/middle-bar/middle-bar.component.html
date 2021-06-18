@@ -1,0 +1,28 @@
+<mat-card class="card border-0 ml-2   mt-2" style="width:100%;height:100px" *ngFor="let pp of profile">
+  <mat-card-header class="mt-2" style="cursor:pointer">
+    <img mat-card-avatar class="example-header-image" id="pp" src={{pp.pic}}>
+    <mat-card-title class="text-primary" id="title">{{pp.fullName}}</mat-card-title>
+    <mat-card-subtitle>Online</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+<div style="margin-top:-40px">
+  <hr>
+</div>
+<div class="row" style="margin-top:-20">
+  <div class="col-6 ">
+  </div>
+  <div class="col-6 mt-2   " style="height:450px;text-align:left;z-index: 1;overflow-x: hidden;scrollbar-width:thin"
+    #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <div class="mt-2 text-justify " *ngFor="let data of messages">
+      <div class="bg-primary px-2 py-2 text-white " style="border-radius:5px">{{data.msg}}</div>
+    </div>
+  </div>
+</div>
+<form [formGroup]="msgForm" class="mt-1" (ngSubmit)="onMessageSubmit()" style="font-size: 11px">
+  <mat-form-field appearance="outline" [style.width.%]=100 >
+    <input matInput placeholder="Write Something" formControlName="msg" #eName >
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button class="btn btn-sm btn-outline-success mt-1" mat-button cdkFocusInitial id="submit">Send</button>
+  </mat-dialog-actions>
+</form>
